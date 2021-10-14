@@ -3,9 +3,9 @@ entries:
   myapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-10-14T02:31:01.80147422-07:00"
+    created: "2021-10-14T02:36:54.549370933-07:00"
     description: A Helm chart for Kubernetes
-    digest: 5bf2c79dbd1deffe9de7395a8d64ef4a9459ad4a7aa5c48c8253a84996a647d5
+    digest: ae31d2f913cd82880f955404a056b692b7ac52d25504c8251ddfa45eda5ce03f
     name: myapp
     type: application
     urls:
@@ -14,7 +14,38 @@ entries:
   wordpress:
   - apiVersion: v1
     appVersion: 5.4.1
-    created: "2021-10-14T02:31:01.814666878-07:00"
+    created: "2021-10-14T02:36:54.56557479-07:00"
+    dependencies:
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - wordpress-database
+      version: 7.x.x
+    description: Web publishing platform for building blogs and websites.
+    digest: 21661cd4ee91f1770dcecb5c7e77f45454dae087ed192d27599d8c02db41e7d3
+    home: http://www.wordpress.com/
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    keywords:
+    - wordpress
+    - cms
+    - blog
+    - http
+    - web
+    - application
+    - php
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: wordpress
+    sources:
+    - https://github.com/bitnami/bitnami-docker-wordpress
+    urls:
+    - https://xvjixiang.github.io/helm-charts/wordpress-9.2.51.tgz
+    version: 9.2.51
+  - apiVersion: v1
+    appVersion: 5.4.1
+    created: "2021-10-14T02:36:54.558105426-07:00"
     dependencies:
     - condition: mariadb.enabled
       name: mariadb
@@ -43,4 +74,4 @@ entries:
     urls:
     - https://xvjixiang.github.io/helm-charts/wordpress-9.2.5-1.tgz
     version: 9.2.5-1
-generated: "2021-10-14T02:31:01.799887905-07:00"
+generated: "2021-10-14T02:36:54.547615557-07:00"
